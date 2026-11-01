@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hanarosia | Parfums pour chaque histoire</title>
+
+    <meta name="description" content="Découvrez l'univers Hanarosia : des parfums élégants pour chaque histoire. Commandez au Maroc.">
+
+    <style>
+         :root {
+            --black: #171310;
+            --gold: #c6a363;
+            --cream: #f7f1e7;
+            --white: #ffffff;
+            --text: #40372e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        
+        header {
+            background: var(--black);
+            color: var(--white);
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            font-style: italic;
+            color: var(--gold);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+        }
+        
+        .hero {
+            padding: 65px 7%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 45px;
+            background: #eee1cd;
+        }
+        
+        .hero-text .tagline {
+            color: #94713c;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+        
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.15;
+            font-weight: normal;
+            color: var(--black);
+            margin-bottom: 22px;
+        }
+        
+        .hero h1 span {
+            color: #a47e40;
+            font-style: italic;
+        }
+        
+        .hero-text p {
+            max-width: 450px;
+            margin-bottom: 28px;
+            color: #655749;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 15px 35px #4a35251c;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--black);
+            color: var(--white);
+            padding: 14px 25px;
+            border: 1px solid var(--black);
+            transition: 0.3s;
+            font-size: 14px;
+        }
+        
+        .btn:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--black);
+        }
+        
+        .section {
+            padding: 75px 7%;
+            text-align: center;
+        }
+        
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            color: #997642;
+        }
+        
+        .section h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(30px, 4vw, 42px);
+            font-weight: normal;
+            color: var(--black);
+            margin: 10px 0 15px;
+        }
+        
+        .section-intro {
+            max-width: 550px;
+            margin: 0 auto 38px;
+            color: #75685b;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            text-align: left;
+        }
+        
+        .product-card {
+            background: var(--white);
+            padding-bottom: 22px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px #3b2b1715;
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            background: #e9decd;
+        }
+        
+        .product-info {
+            padding: 18px 20px 0;
+        }
+        
+        .product-info h3 {
+            font-family: Georgia, serif;
+            font-size: 23px;
+            font-weight: normal;
+            color: var(--black);
+        }
+        
+        .product-info p {
+            color: #7a6b5b;
+            font-size: 14px;
+            margin: 7px 0 14px;
+        }
+        
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #9a7336;
+        }
+        
+        .order-btn {
+            background: var(--black);
+            color: white;
+            border: none;
+            padding: 10px 13px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        
+        .order-btn:hover {
+            background: #a47e40;
+        }
+        
+        .about {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 65px 7%;
+        }
+        
+        .about h2 {
+            font-family: Georgia, serif;
+            color: var(--gold);
+            font-size: 38px;
+            font-weight: normal;
+            margin-bottom: 18px;
+        }
+        
+        .about p {
+            max-width: 650px;
+            margin: auto;
+            color: #e1d7c9;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 45px 7%;
+            text-align: center;
+            background: #fffaf2;
+        }
+        
+        .feature {
+            padding: 10px;
+        }
+        
+        .feature .symbol {
+            font-size: 28px;
+            color: #a47e40;
+        }
+        
+        .feature h3 {
+            font-size: 17px;
+            margin: 8px 0;
+            color: var(--black);
+        }
+        
+        .feature p {
+            color: #76685a;
+            font-size: 14px;
+        }
+        
+        .contact {
+            text-align: center;
+            padding: 70px 7%;
+        }
+        
+        .contact p {
+            margin: 10px 0 25px;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        footer {
+            background: var(--black);
+            color: #d8cbb9;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 13px;
+        }
+        
+        footer .footer-logo {
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 26px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 750px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+            nav {
+                justify-content: center;
+                gap: 15px;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 45px 6%;
+            }
+            .hero-image {
+                max-width: 500px;
+                margin: auto;
+            }
+            .products {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px;
+            }
+            .product-card img {
+                height: 200px;
+            }
+            .product-info {
+                padding: 13px 12px 0;
+            }
+            .product-info h3 {
+                font-size: 19px;
+            }
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 420px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+            .product-card img {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <a href="#accueil" class="logo">Hanarosia</a>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#parfums">Nos parfums</a>
+            <a href="#histoire">Notre histoire</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- PAGE D'ACCUEIL -->
+    <main>
+        <section class="hero" id="accueil">
+            <div class="hero-text">
+                <div class="tagline">L'élégance en chaque note</div>
+
+                <h1>
+                    Hanarosia,<br>
+                    <span>un parfum</span><br> pour chaque histoire.
+                </h1>
+
+                <p>
+                    Découvrez un univers de parfums où chaque fragrance exprime une émotion, une personnalité et un souvenir. Trouvez le parfum qui vous ressemble.
+                </p>
+
+                <a href="#parfums" class="btn">Découvrir nos parfums</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/hanarosia-promo.png" alt="L'univers élégant des parfums Hanarosia">
+            </div>
+        </section>
+
+        <!-- PRODUITS -->
+        <section class="section" id="parfums">
+            <div class="eyebrow">Notre collection</div>
+            <h2>Découvrez nos parfums</h2>
+
+            <p class="section-intro">
+                Des fragrances sélectionnées pour accompagner vos plus beaux moments.
+            </p>
+
+            <div class="products">
+
+                <!-- Produit 1 -->
+                <article class="product-card">
+                    <img src="images/hanarosia-produits.jpg" alt="Collection de parfums Hanarosia" loading="lazy">
+
+                    <div class="product-info">
+                        <h3>Collection Élégance</h3>
+                        <p>Une fragrance raffinée pour votre quotidien.</p>
+
+                        <div class="product-bottom">
+                            <span class="price">Prix sur demande</span>
+
+                            <button class="order-btn" onclick="commander('Collection Élégance')">
+                Commander
+              </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 2 -->
+                <article class="product-card">
+                    <img src="images/hanarosia-produits.jpg" alt="Parfums de la collection Hanarosia" loading="lazy">
+
+                    <div class="product-info">
+                        <h3>Collection Signature</h3>
+                        <p>Une signature olfactive pleine de caractère.</p>
+
+                        <div class="product-bottom">
+                            <span class="price">Prix sur demande</span>
+
+                            <button class="order-btn" onclick="commander('Collection Signature')">
+                Commander
+              </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 3 -->
+                <article class="product-card">
+                    <img src="images/hanarosia-produits.jpg" alt="Parfum Hanarosia à offrir" loading="lazy">
+
+                    <div class="product-info">
+                        <h3>Collection Cadeau</h3>
+                        <p>Une attention parfumée pour vos proches.</p>
+
+                        <div class="product-bottom">
+                            <span class="price">Prix sur demande</span>
+
+                            <button class="order-btn" onclick="commander('Collection Cadeau')">
+                Commander
+              </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- HISTOIRE DE LA MARQUE -->
+        <section class="about" id="histoire">
+            <h2>Notre histoire</h2>
+
+            <p>
+                Chez Hanarosia, nous croyons que chaque parfum raconte une histoire unique. Notre univers célèbre l'élégance, les émotions et les souvenirs qui nous accompagnent. Trouvez la fragrance qui exprime votre personnalité.
+            </p>
+        </section>
+
+        <!-- AVANTAGES -->
+        <section class="features">
+            <div class="feature">
+                <div class="symbol">✧</div>
+                <h3>Élégance & caractère</h3>
+                <p>Des fragrances pour exprimer votre personnalité.</p>
+            </div>
+
+            <div class="feature">
+                <div class="symbol">♡</div>
+                <h3>Un cadeau unique</h3>
+                <p>Des idées parfumées pour toutes les occasions.</p>
+            </div>
+
+            <div class="feature">
+                <div class="symbol">♧</div>
+                <h3>Livraison au Maroc</h3>
+                <p>Contactez-nous pour connaître les modalités de livraison.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+            <div class="eyebrow">Restons en contact</div>
+            <h2>Votre prochaine fragrance vous attend</h2>
+
+            <p>
+                Une question sur un parfum ? Contactez-nous pour découvrir notre collection et passer commande.
+            </p>
+
+            <div class="contact-links">
+                <a class="btn" href="https://wa.me/212723535414" target="_blank" rel="noopener noreferrer">
+          Commander sur WhatsApp
+        </a>
+
+                <a class="btn" href="https://www.instagram.com/hanarosia.parfum/" target="_blank" rel="noopener noreferrer">
+          Suivez-nous sur Instagram
+        </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">Hanarosia</div>
+        <p>Un parfum pour chaque histoire.</p>
+        <p>&copy; <span id="annee"></span> Hanarosia. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Mettre automatiquement l'année actuelle
+        document.getElementById("annee").textContent =
+            new Date().getFullYear();
+
+        // Ouvrir WhatsApp avec le nom du parfum choisi
+        function commander(nomParfum) {
+            const message =
+                "Bonjour Hanarosia, je souhaite avoir des informations sur : " +
+                nomParfum;
+
+            const url =
+                "https://wa.me/212723535414?text=" +
+                encodeURIComponent(message);
+
+            window.open(url, "_blank", "noopener,noreferrer");
+        }
+    </script>
+
+</body>
+
+</html>
